@@ -1,0 +1,30 @@
+CURRENT: JPA+EJB, MYLYN (JSF+CDI is OK)
+
+NOTES:
+
+- tomee dosnt support java 8 nor does it support web module 3.1
+
+- facets can be changed in .setting/eclipse...facet.core.xml
+
+- there must be a beans.xml file in WEB-INF flder in order for Java EE CDI to work
+
+- persistence.xml: xml schemas must be sun.com...
+
+
+
+<Dynamic Typed Design>
+
+- FILES: Db, Dao, FaceUtils(and related) , BaseBean [no sql builders]
+
+- all sqls and db access' in Dao.java(some in basebean) , bussines logic in managed bean,
+
+</>
+
+<Type Safe Design>
+
+full type safe object for db tables, all bussines logic in ejb, all data access are through JPA Criteria 
+managed beans are part of facelets and calling bussines object and return what facelet component expects
+
+-FILES: model package, one ejb for a few models, managed beans[no Db , Sql or daos]
+
+</>
